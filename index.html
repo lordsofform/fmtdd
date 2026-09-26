@@ -100,10 +100,10 @@ const words=["MINDS","DIRECTORS","FILMMAKERS","EDITORS","CREATIVES","BRANDS","AG
 const word=document.getElementById("word");
 let i=0;
 function renderWord(text){
-  word.replaceChildren(...[...text].map(ch=>{
+  word.replaceChildren(...[...text].map((ch,index)=>{
     const letter=document.createElement("span");
     letter.textContent=ch;
-    if(ch==="E"||ch==="S")letter.className="mirror-letter";
+    if(index>0&&(ch==="E"||ch==="S"))letter.className="mirror-letter";
     return letter;
   }));
 }
