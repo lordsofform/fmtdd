@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>For Minds That Desire Different</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#506FE0;--pink:#CC5264;--lemon:#FFF200;--black:#000}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{margin:0;width:100%;min-height:100%;background:var(--blue);font-family:"League Spartan","Arial Black",Arial,sans-serif}
+body{min-height:100vh;min-height:100svh;overflow-x:hidden}
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px 12px}
+.stack{width:min(1200px,96vw);display:flex;flex-direction:column;align-items:center}
+.top-title{color:var(--lemon);font-size:clamp(9px,1vw,14px);letter-spacing:.16em;text-transform:uppercase;-webkit-text-stroke:.8px var(--black);paint-order:stroke fill;margin-bottom:8px}
+.line{display:flex;justify-content:center;align-items:center;text-align:center;font-weight:900;line-height:.86;letter-spacing:-.055em;white-space:nowrap;color:var(--pink);-webkit-text-stroke:2px var(--black);paint-order:stroke fill}
+.l1{width:20%;font-size:clamp(38px,4.4vw,68px)}
+.l2{width:38%;font-size:clamp(44px,5.5vw,84px)}
+.l3{width:54%;font-size:clamp(56px,6.9vw,102px)}
+.l4{width:76%;font-size:clamp(70px,8.9vw,132px)}
+.l5{width:100%;font-size:clamp(88px,11.5vw,170px)}
+.flip-holder{display:inline-flex;justify-content:center;align-items:center;min-width:8.8ch;perspective:900px}
+.flipword{display:inline-block;font:inherit;color:var(--lemon);letter-spacing:inherit;transform-origin:center;will-change:transform,opacity;-webkit-text-stroke:2px var(--black);paint-order:stroke fill}
+.flipword.is-minds{color:var(--pink)!important}
+.flipword.is-other{color:var(--lemon)!important}
+.flip-out{animation:flipOut .45s ease-in forwards}
+.flip-in{animation:flipIn .55s ease-out forwards}
+@keyframes flipOut{0%{transform:rotateX(0deg);opacity:1}100%{transform:rotateX(-90deg);opacity:0}}
+@keyframes flipIn{0%{transform:rotateX(90deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}
+.rights-line{margin-top:10px;min-height:1.25em;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--lemon);text-transform:uppercase;font-weight:900;letter-spacing:.08em;font-size:clamp(11px,1.3vw,17px);-webkit-text-stroke:.8px var(--black);paint-order:stroke fill;perspective:700px}
+.rights-word{display:inline-block;transform-origin:center;will-change:transform,opacity}
+.rights-out{animation:flipOut .45s ease-in forwards}
+.rights-in{animation:flipIn .55s ease-out forwards}
+.ctas{margin-top:24px;display:flex;gap:18px}
+.btn{text-decoration:none;text-transform:uppercase;font-weight:900;border:3px solid var(--black);box-shadow:6px 6px 0 var(--black);font-size:clamp(22px,2.6vw,34px);padding:16px 28px 14px;min-width:190px;text-align:center}
+.listen{background:var(--lemon);color:var(--black)}
+.contact{background:var(--lemon);color:var(--pink);-webkit-text-stroke:.7px var(--black);paint-order:stroke fill}
+@media(max-width:700px){
+  .hero{align-items:flex-start;padding:max(5.5vh,env(safe-area-inset-top)) 6px max(4vh,env(safe-area-inset-bottom))}
+  .stack{width:98vw}
+  .top-title{font-size:clamp(10px,2.9vw,13px);letter-spacing:.12em;margin-bottom:7px}
+  .l1{width:34%;font-size:clamp(38px,10vw,50px)}
+  .l2{width:72%;font-size:clamp(48px,13vw,64px)}
+  .l3{width:78%;font-size:clamp(58px,15vw,74px)}
+  .l4{width:92%;font-size:clamp(70px,18vw,88px)}
+  .l5{width:100%;font-size:clamp(78px,20vw,98px)}
+  .flip-holder{min-width:7.1ch}
+  .rights-line{margin-top:10px;font-size:clamp(10px,2.7vw,13px);letter-spacing:.065em;min-height:2.2em;padding:0 10px}
+  .ctas{width:100%;gap:14px}
+  .btn{font-size:clamp(23px,6.2vw,30px);padding:16px 24px 13px;min-width:44vw;box-shadow:5px 5px 0 var(--black)}
+}
+</style>
+</head>
+<body>
+<main class="hero">
+  <div class="stack">
+    <div class="top-title">Original Music for Sync</div>
+    <div class="line l1">for</div>
+    <div class="line l2"><span class="flip-holder"><span id="word" class="flipword">MINDS</span></span></div>
+    <div class="line l3">that</div>
+    <div class="line l4">desire</div>
+    <div class="line l5">different</div>
+    <div class="rights-line"><span id="rightsWord" class="rights-word">100% MASTER + PUBLISHING CONTROLLED</span></div>
+    <div class="ctas">
+      <a class="btn listen" href="#">Listen</a>
+      <a class="btn contact" href="contact.html">Contact</a>
+    </div>
+  </div>
+</main>
+<script>
+const words=["MINDS","DIRECTORS","FILMMAKERS","EDITORS","CREATIVES","BRANDS","AGENCIES","PRODUCERS","SUPERVISORS","STUDIOS","STORYTELLERS","DREAMERS","OUTSIDERS","VISIONARIES","MAKERS","ARTISTS"];
+const word=document.getElementById("word");
+let i=0;
+function setWordColor(){const isMinds=word.textContent.trim()==="MINDS";word.classList.toggle("is-minds",isMinds);word.classList.toggle("is-other",!isMinds)}
+setWordColor();
+const rights=["100% MASTER + PUBLISHING CONTROLLED","DIRECT SYNC CLEARANCE","NO THIRD-PARTY APPROVAL REQUIRED"];
+const rightsWord=document.getElementById("rightsWord");
+let r=0;
+function syncFlip(){
+  word.classList.remove("flip-in");
+  word.classList.add("flip-out");
+  rightsWord.classList.remove("rights-in");
+  rightsWord.classList.add("rights-out");
+  setTimeout(()=>{
+    i=(i+1)%words.length;
+    r=(r+1)%rights.length;
+    word.textContent=words[i];
+    setWordColor();
+    rightsWord.textContent=rights[r];
+    word.classList.remove("flip-out");
+    rightsWord.classList.remove("rights-out");
+    void word.offsetWidth;
+    void rightsWord.offsetWidth;
+    word.classList.add("flip-in");
+    rightsWord.classList.add("rights-in");
+  },450);
+}
+setInterval(syncFlip,3000);
+</script>
+</body>
+</html>
